@@ -46,8 +46,8 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Spectacle theme={theme}>
-        <Deck transition={["zoom", "slide"]} transitionDuration={500}>
-          <Slide transition={["zoom"]}>
+        <Deck transition={["fade", "slide"]} transitionDuration={500}>
+          <Slide>
             <Heading size={2} fit lineHeight={1}>
               Relay
             </Heading>
@@ -57,6 +57,8 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
             <Image src={ images.connect } />
+          </Slide>
+          <Slide>
           </Slide>
         </Deck>
       </Spectacle>
