@@ -1,8 +1,8 @@
 /*eslint-disable object-shorthand*/
 
 const defaultColors = {
-  primary: "#f9c300",
-  secondary: "black",
+  primary: "#a23",
+  secondary: "#222",
   tertiary: "white",
   quartenary: "white"
 };
@@ -21,11 +21,11 @@ const screen = (colorArg = defaultColors, fontArg = defaultFonts) => {
     fonts: fonts,
     global: {
       body: {
-        background: colors.primary,
+        background: colors.secondary,
         fontFamily: fonts.primary,
         fontWeight: "normal",
         fontSize: "2em",
-        color: colors.secondary,
+        color: colors.primary,
         overflow: "hidden"
       },
       "html, body": {
@@ -192,7 +192,7 @@ const screen = (colorArg = defaultColors, fontArg = defaultFonts) => {
       },
       heading: {
         h1: {
-          color: colors.tertiary,
+          color: colors.primary,
           fontSize: "7.05rem",
           fontFamily: fonts.primary,
           lineHeight: 1,
@@ -201,7 +201,7 @@ const screen = (colorArg = defaultColors, fontArg = defaultFonts) => {
           zoom: 1
         },
         h2: {
-          color: colors.secondary,
+          color: colors.primary,
           fontSize: "5.88rem",
           fontFamily: fonts.primary,
           lineHeight: 1,
@@ -209,7 +209,7 @@ const screen = (colorArg = defaultColors, fontArg = defaultFonts) => {
           margin: 0
         },
         h3: {
-          color: "black",
+          color: "white",
           fontSize: "4.9rem",
           fontFamily: fonts.secondary,
           lineHeight: 1,
@@ -217,7 +217,7 @@ const screen = (colorArg = defaultColors, fontArg = defaultFonts) => {
           margin: "0.5rem auto"
         },
         h4: {
-          color: "black",
+          color: "white",
           fontSize: "3.82rem",
           fontFamily: fonts.primary,
           lineHeight: 1,
@@ -225,7 +225,7 @@ const screen = (colorArg = defaultColors, fontArg = defaultFonts) => {
           margin: "0.5rem auto"
         },
         h5: {
-          color: "black",
+          color: "white",
           fontSize: "3.19rem",
           fontFamily: fonts.primary,
           lineHeight: 1,
@@ -233,7 +233,7 @@ const screen = (colorArg = defaultColors, fontArg = defaultFonts) => {
           margin: "0.5rem auto"
         },
         h6: {
-          color: "black",
+          color: "white",
           fontSize: "2.66rem",
           fontFamily: fonts.primary,
           lineHeight: 1,
@@ -260,7 +260,7 @@ const screen = (colorArg = defaultColors, fontArg = defaultFonts) => {
         strikethrough: {}
       },
       text: {
-        color: "black",
+        color: "white",
         fontSize: "2.66rem",
         fontFamily: fonts.primary,
         margin: "0.25rem auto"
