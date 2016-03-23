@@ -81,6 +81,16 @@ const containerCode = `RecordList = Relay.createContainer(RecordList, {
   }
 });`
 
+const queryCode = `export const RecordsQuery = {
+  list: (Component) => Relay.QL\`
+    query {
+      recordList {
+        \${Component.getFragment('list')}
+      }
+    }
+  \`
+}`
+
 export default class Presentation extends React.Component {
   render() {
     return (
@@ -108,6 +118,9 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
             <CodePane lang="jsx" source={ containerCode } />
+          </Slide>
+          <Slide>
+            <CodePane lang="jsx" source={ queryCode } />
           </Slide>
           <Slide>
             <Heading size={3}>
