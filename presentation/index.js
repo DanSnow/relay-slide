@@ -35,12 +35,51 @@ require('spectacle/lib/themes/default/index.css');
 
 const images = {
   logo: require('../assets/logo.svg'),
-  connect: require('../assets/connect.png')
+  connect: require('../assets/connect.png'),
+  list: require('../assets/list.png')
 };
 
 preloader(images);
 
 const theme = createTheme();
+
+const listCode = `class RecordList extends Component {
+  render() {
+    let { list } = this.props;
+    return (
+      <div>
+        <h3> Total count: { list.count } </h3>
+        <ul>
+          {
+            list.records.map((record) => {
+              return (
+                <li key={ record.id }>
+                  <Link to={\`/\${record.id}\`}>
+                    <span> {record.name} </span>
+                  </Link>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+    )
+  }
+}`
+
+const containerCode = `RecordList = Relay.createContainer(RecordList, {
+  fragments: {
+    list: () => Relay.QL\`
+      fragment on RecordList {
+        count,
+        records {
+          id,
+          name
+        }
+      }
+    \`
+  }
+});`
 
 export default class Presentation extends React.Component {
   render() {
@@ -56,9 +95,35 @@ export default class Presentation extends React.Component {
             <Image src={ images.logo } />
           </Slide>
           <Slide>
+            <Text>A JAVASCRIPT FRAMEWORK FOR BUILDING DATA-DRIVEN REACT APPLICATIONS</Text>
+          </Slide>
+          <Slide>
             <Image src={ images.connect } />
           </Slide>
           <Slide>
+            <CodePane lang="jsx" source={ listCode } />
+          </Slide>
+          <Slide>
+            <Image src={ images.list } />
+          </Slide>
+          <Slide>
+            <CodePane lang="jsx" source={ containerCode } />
+          </Slide>
+          <Slide>
+            <Heading size={3}>
+              References:
+            </Heading>
+            <List>
+              <ListItem>
+                <Link>https://facebook.github.io/relay/</Link>
+              </ListItem>
+              <ListItem>
+                <Link>https://medium.com/@clayallsopp/relay-101-building-a-hacker-news-client-bb8b2bdc76e6#.735ck82y3</Link>
+              </ListItem>
+              <ListItem>
+                <Link>https://medium.com/@cpojer/relay-and-routing-36b5439bad9</Link>
+              </ListItem>
+            </List>
           </Slide>
         </Deck>
       </Spectacle>
