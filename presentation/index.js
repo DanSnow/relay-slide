@@ -36,6 +36,7 @@ require('spectacle/lib/themes/default/index.css');
 const images = {
   logo: require('../assets/logo.svg'),
   connect: require('../assets/connect.png'),
+  relay: require('../assets/relay.png'),
   list: require('../assets/list.png')
 };
 
@@ -91,6 +92,12 @@ const queryCode = `export const RecordsQuery = {
   \`
 }`
 
+const relayContainerCode = `<Relay.RootContainer
+  Component={ Component }
+  renderFetched={ (data) => <Component { ...props }  { ...data } /> }
+  route={ { name, params, queries } }
+/>`
+
 export default class Presentation extends React.Component {
   render() {
     return (
@@ -111,6 +118,9 @@ export default class Presentation extends React.Component {
             <Image src={ images.connect } />
           </Slide>
           <Slide>
+            <Image src={ images.relay } />
+          </Slide>
+          <Slide>
             <CodePane lang="jsx" source={ listCode } />
           </Slide>
           <Slide>
@@ -121,6 +131,9 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
             <CodePane lang="jsx" source={ queryCode } />
+          </Slide>
+          <Slide>
+            <CodePane lang="jsx" source={ relayContainerCode } />
           </Slide>
           <Slide>
             <Heading size={3}>
