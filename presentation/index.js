@@ -169,6 +169,9 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
           <Slide>
+            <Heading size={ 2 }> Thanks </Heading>
+          </Slide>
+          <Slide>
             <Heading size={3}>
               References:
             </Heading>
