@@ -136,6 +136,11 @@ export default class Presentation extends React.Component {
             <CodePane lang="jsx" source={ relayContainerCode } />
           </Slide>
           <Slide>
+            <Heading size={2}>
+              Live Demo
+            </Heading>
+          </Slide>
+          <Slide>
             <Heading size={3}>
               References:
             </Heading>
