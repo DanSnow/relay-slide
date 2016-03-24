@@ -136,6 +136,24 @@ export default class Presentation extends React.Component {
             <CodePane lang="jsx" source={ relayContainerCode } />
           </Slide>
           <Slide>
+            <Heading size={ 3 }> Mutation </Heading>
+            <List>
+              <ListItem>
+                <Text>
+                  GraphQL Mutation
+                </Text>
+              </ListItem>
+              <ListItem>
+                <Text>
+                  Tell Relay how data will change.
+                </Text>
+              </ListItem>
+            </List>
+          </Slide>
+          <Slide>
+            <Heading size={ 2 }> So how about Relay? </Heading>
+          </Slide>
+          <Slide>
             <Heading size={2}>
               Live Demo
             </Heading>
@@ -153,6 +171,16 @@ export default class Presentation extends React.Component {
               </ListItem>
               <ListItem>
                 <Link>https://medium.com/@cpojer/relay-and-routing-36b5439bad9</Link>
+              </ListItem>
+              <ListItem>
+                <Link>
+                  https://medium.com/@clayallsopp/relay-102-mutations-d8b471a4730e#.naf6gr7of
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link>
+                  http://blog.pathgather.com/blog/a-beginners-guide-to-relay-mutations
+                </Link>
               </ListItem>
             </List>
           </Slide>
