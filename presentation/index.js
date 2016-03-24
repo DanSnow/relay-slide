@@ -159,10 +159,14 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
           <Slide>
-            <Text>
-              Slide: <Link>https://goo.gl/zCoEK6</Link>
-              Code: <Link>https://goo.gl/mnroVT</Link>
-            </Text>
+            <List>
+              <ListItem>
+                Slide: <Link>https://goo.gl/zCoEK6</Link>
+              </ListItem>
+              <ListItem>
+                Code: <Link>https://goo.gl/mnroVT</Link>
+              </ListItem>
+            </List>
           </Slide>
           <Slide>
             <Heading size={3}>
