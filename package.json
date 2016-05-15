@@ -1,7 +1,7 @@
 {
-  "name": "spectacle-boilerplate",
-  "version": "1.0.1",
-  "description": "ReactJS Powered Presentation Framework",
+  "name": "relay-slide",
+  "version": "0.0.0",
+  "description": "Introduction to Relay",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist",
